@@ -73,7 +73,7 @@ export function InputForm({
           disabled={isLoading || isDataLoaded}
           onChange={handleSetSequence}
           InputLabelProps={{ shrink: true }}
-          helperText={`Sequence length (bp) has to be at lease 50bp. Current length: ${sequence.length}`}
+          helperText={`Sequence length (bp) has to be at least ${Constants.MINIMUM_SEQUENCE_LENGTH}bp. But maximum up to ${Constants.MAXIMUM_SEQUENCE_LENGTH}bp. Current length: ${sequence.length}`}
           error={inputError.sequence}
         />
 

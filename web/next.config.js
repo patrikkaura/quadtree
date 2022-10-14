@@ -1,6 +1,14 @@
 const { withAxiom } = require("next-axiom");
+const { withSentryConfig } = require("@sentry/nextjs");
 
-module.exports = withAxiom({
-  reactStrictMode: true,
-  swcMinify: false,
-});
+const sentryWebpackPluginOptions = {
+  silent: false,
+};
+
+module.exports = withSentryConfig(
+  withAxiom({
+    reactStrictMode: true,
+    swcMinify: false,
+  }),
+  sentryWebpackPluginOptions
+);

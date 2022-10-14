@@ -2,6 +2,7 @@ import { DEFAULT_SEQUENCE } from "@core/config";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import * as Sentry from "@sentry/react";
 import { trpc } from "@utils/trpc";
 import { useState } from "react";
 
@@ -12,7 +13,7 @@ import { InfoCards } from "./info-cards/InfoCards";
 import Table from "./table/Table";
 import { Toolbar } from "./Toolbar";
 
-export function Dashboard() {
+function Dashboard() {
   const [sequence, setSequence] = useState(DEFAULT_SEQUENCE);
   const [threshold, setThreshold] = useState(0.2);
 
@@ -68,3 +69,5 @@ export function Dashboard() {
     </div>
   );
 }
+
+export default Sentry.withProfiler(Dashboard);
