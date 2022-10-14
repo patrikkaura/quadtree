@@ -11,6 +11,8 @@ import {
 import { useMemo } from "react";
 import { Line } from "react-chartjs-2";
 
+import { getGraphScale, range } from "./utils";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -26,42 +28,34 @@ type Props = {
   length: number;
 };
 
-function range(start: number, end: number, step: number) {
-  return Array.from(
-    { length: (end - start) / step + 1 },
-    (_, i) => start + i * step
-  );
-}
-
 export function SequenceGraph({ intervals, length }: Props) {
-  const scale = useMemo(() => {
-    if (length < 1000) {
-      return 10;
-    } else if (length < 2500) {
-      return 100;
-    }
-    return 250;
-  }, [length]);
+  console.log({ length });
+
+  const graphScale = useMemo(() => getGraphScale(length), [length]);
 
   let labels = useMemo(() => {
-    let flattendeIntervals = intervals
+    let flattenedIntervals = intervals
       .map(([start, end]) => [start - 1, start, end, end + 1])
       .flat(1);
 
-    flattendeIntervals = [
-      ...range(0, length, scale),
-      ...flattendeIntervals,
+    flattenedIntervals = [
+      ...range(0, length, graphScale),
+      ...flattenedIntervals,
     ].sort((a, b) => a - b);
 
-    return flattendeIntervals;
-  }, [intervals, length, scale]);
+    flattenedIntervals = [
+      ...flattenedIntervals,
+      ...intervals.map(([start, end]) => Math.floor((start + end) / 2)),
+    ];
+
+    return flattenedIntervals.sort((a, b) => a - b);
+  }, [intervals, length, graphScale]);
 
   const detectedIntervals: Record<number, number> = intervals.reduce(
-    (acc, interval) => {
+    (acc, [start, end]) => {
       return {
         ...acc,
-        [interval[0]]: interval[1] - interval[0],
-        [interval[1]]: interval[1] - interval[0],
+        [Math.floor((start + end) / 2)]: end - start,
       };
     },
     {}
@@ -75,7 +69,6 @@ export function SequenceGraph({ intervals, length }: Props) {
         data: labels.map((position) => detectedIntervals[position] ?? 0),
         borderColor: "rgb(103, 134, 198)",
         backgroundColor: "rgba(255, 255, 255, 1)",
-        stepped: true,
       },
     ],
   };
