@@ -2,7 +2,7 @@ import MuiCard from "@mui/material/Card";
 import MuiCardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-type Props = {
+export type Props = {
   header: string;
   content: string | number;
   width: number;

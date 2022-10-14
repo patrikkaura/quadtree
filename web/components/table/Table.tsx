@@ -7,11 +7,11 @@ import { Sequence } from "./Sequence";
 
 type PredictorResult = QuadtreeData["results"][0];
 
-type Props = {
+export type Props = {
   data: PredictorResult[];
 };
 
-export default function Table({ data }: Props) {
+export function Table({ data }: Props) {
   const columns = useMemo<MRT_ColumnDef<PredictorResult>[]>(
     () => [
       {
@@ -44,7 +44,9 @@ export default function Table({ data }: Props) {
         id: "sequence",
         header: "Sequence",
         size: 20,
-        Cell: ({ cell }) => <Sequence sequence={cell.getValue<string>()} />,
+        Cell: ({ cell, row }) => (
+          <Sequence index={row.index} sequence={cell.getValue<string>()} />
+        ),
       },
     ],
     []

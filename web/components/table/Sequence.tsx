@@ -2,11 +2,18 @@ import { useMemo } from "react";
 
 import { groupNucleicPairs } from "./utils";
 
-type Props = {
+export type Props = {
+  index: number;
   sequence: string;
 };
 
-export function Sequence({ sequence }: Props) {
+const BASE_GROUP_STYLE = {
+  fontSize: 20,
+  fontWeight: 500,
+  borderBottom: "1px solid black",
+};
+
+export function Sequence({ index, sequence }: Props) {
   const grouped = groupNucleicPairs(sequence);
 
   const sequenceComponents = useMemo(
@@ -17,10 +24,8 @@ export function Sequence({ sequence }: Props) {
             <span
               key={index}
               style={{
+                ...BASE_GROUP_STYLE,
                 color: "#ff5e7c",
-                fontSize: 20,
-                fontWeight: 500,
-                borderBottom: "1px solid black",
               }}
             >
               {group}
@@ -31,10 +36,8 @@ export function Sequence({ sequence }: Props) {
             <span
               key={index}
               style={{
+                ...BASE_GROUP_STYLE,
                 color: "#6786C6",
-                fontSize: 20,
-                fontWeight: 500,
-                borderBottom: "1px solid black",
               }}
             >
               {group}
@@ -47,5 +50,5 @@ export function Sequence({ sequence }: Props) {
     [grouped]
   );
 
-  return <>{sequenceComponents}</>;
+  return <span data-testid={`sequence-${index}`}>{sequenceComponents}</span>;
 }

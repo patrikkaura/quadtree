@@ -1,4 +1,4 @@
-export function range(start: number, end: number, step: number) {
+export function getRange(start: number, end: number, step: number) {
   return Array.from(
     { length: (end - start) / step + 1 },
     (_, i) => start + i * step

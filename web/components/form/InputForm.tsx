@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { ChangeEvent, useCallback, useMemo } from "react";
 
-type Props = {
+export type Props = {
   isDataLoaded: boolean;
   isLoading: boolean;
   sequence: string;
@@ -65,6 +65,7 @@ export function InputForm({
       <Stack direction="row" spacing={4} style={{ paddingTop: 30 }}>
         <TextField
           required
+          data-testid="sequence-input"
           label="Sequence"
           multiline
           rows={10}
@@ -80,6 +81,7 @@ export function InputForm({
         <Stack direction="column" spacing={2}>
           <TextField
             required
+            data-testid="threshold-input"
             label="Threshold"
             type="number"
             value={threshold}
@@ -92,18 +94,22 @@ export function InputForm({
             error={inputError.threshold}
           />
           <LoadingButton
+            data-testid="start-button"
             color="inherit"
             variant="outlined"
             loading={isLoading}
             onClick={onAnalyseClick}
-            disabled={inputError.sequence || inputError.threshold}
+            disabled={
+              inputError.sequence || inputError.threshold || isDataLoaded
+            }
           >
             START ANALYSIS
           </LoadingButton>
           <Button
+            data-testid="reset-button"
             color="error"
             variant="outlined"
-            disabled={isLoading}
+            disabled={isLoading || !isDataLoaded}
             onClick={handleResetForm}
           >
             RESET ANALYSIS

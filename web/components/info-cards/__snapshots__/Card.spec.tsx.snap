@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+    style="width: 200px; border-top: 5px solid; border-color: #000000;"
+  >
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
+      >
+        header
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
+      >
+        random-content
+      </p>
+    </div>
+  </div>
+</div>
+`;

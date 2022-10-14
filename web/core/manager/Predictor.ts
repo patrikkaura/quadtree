@@ -2,7 +2,7 @@ import { makePrediction } from "@core/model/predictor/makePrediction";
 import { makeResults } from "@core/model/predictor/makeResults";
 import { mergePredictions } from "@core/model/predictor/mergePredictions";
 import { sequenceConvertor } from "@core/model/predictor/sequenceConvertor";
-import { calculateFrequencyPerThousand } from "@core/model/stats/calculateFrequencePerThousand";
+import { calculateFrequencyPerThousand } from "@core/model/stats/calculateFrequencyPerThousand";
 import { calculateGcCount } from "@core/model/stats/calculateGcCount";
 
 export class PredictorManager {

@@ -1,6 +1,6 @@
 {
   "extends": "next",
-  "plugins": ["simple-import-sort"],
+  "plugins": ["simple-import-sort", "testing-library"],
   "settings": {
     "next": {
       "rootDir": "src"
@@ -9,5 +9,15 @@
   "rules": {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
-  }
+  },
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ]
 }

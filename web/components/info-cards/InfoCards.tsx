@@ -4,7 +4,7 @@ import { useMemo } from "react";
 
 import { Card } from "./Card";
 
-type Props = {
+export type Props = {
   threshold: number;
   stats: QuadtreeData["stats"];
 };

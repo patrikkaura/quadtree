@@ -11,7 +11,7 @@ import {
 import { useMemo } from "react";
 import { Line } from "react-chartjs-2";
 
-import { getGraphScale, range } from "./utils";
+import { getGraphScale, getRange } from "./utils";
 
 ChartJS.register(
   CategoryScale,
@@ -23,14 +23,12 @@ ChartJS.register(
   Legend
 );
 
-type Props = {
+export type Props = {
   intervals: number[][];
   length: number;
 };
 
 export function SequenceGraph({ intervals, length }: Props) {
-  console.log({ length });
-
   const graphScale = useMemo(() => getGraphScale(length), [length]);
 
   let labels = useMemo(() => {
@@ -39,7 +37,7 @@ export function SequenceGraph({ intervals, length }: Props) {
       .flat(1);
 
     flattenedIntervals = [
-      ...range(0, length, graphScale),
+      ...getRange(0, length, graphScale),
       ...flattenedIntervals,
     ].sort((a, b) => a - b);
 
