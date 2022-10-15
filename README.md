@@ -1,4 +1,4 @@
-<h1 align='center'> QUADTREE</h1>
+<h1 align='center'>Quadtree</h1>
 <br />
 <div align="center">
     <img src="https://img.shields.io/badge/Quadtree v1.0.0-green?style=for-the-badge" alt='package_version'/>
