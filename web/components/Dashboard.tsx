@@ -10,10 +10,10 @@ import { Alert } from "./Alert";
 import { InputForm } from "./form/InputForm";
 import { SequenceGraph } from "./graph/SequenceGraph";
 import { InfoCards } from "./info-cards/InfoCards";
-import Table from "./table/Table";
+import { Table } from "./table/Table";
 import { Toolbar } from "./Toolbar";
 
-function Dashboard() {
+export function Dashboard() {
   const [sequence, setSequence] = useState(DEFAULT_SEQUENCE);
   const [threshold, setThreshold] = useState(0.2);
 
