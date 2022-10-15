@@ -12,11 +12,11 @@ The Quadtree is a gradient-boosted decision tree model used to predict guanine q
 
 ```
 quadtree
-    └───web -> preview website source code
-    └───python
-        └─── model -> lightgbm model params
-        └─── train -> example files how training was performed
-        └─── quadtree.py -> predictor
+    └─ web -> preview website source code
+    └─ python
+          └─ model -> lightgbm model params
+          └─ train -> example files how training was performed
+          └─ quadtree.py -> predictor
 ```
 
 ## Requirements
@@ -72,6 +72,21 @@ df = pd.DataFrame(result)
 |  3 |       3 |       1635 | AGATTGGGTTACAGCTATATTTGGAGTAAACCCAACAATAGCAGAAGGATTTAAAACACTAATACAGCCATTTAT                                                                                                                                                                                                   |       75 |
 |  4 |       4 |       2229 | AATAGATGAAGGGGGAGATTGGAGACCAATAGTGCAATTCCTGCGATACCAACAAATAGAGTTTATAACATTTTTAG                                                                                                                                                                                                 |       77 |                                                                                                                        
 
+## Training parameters
+
+These parameter were used to train lightgbm model
+
+| LGBM Classifier      | value                 |
+|----------------------|-----------------------|
+| colsample bytree     | 0.817574864502621     |
+| learning rate        | 0.03744835808549148   |
+| max bin              | 127                   |
+| min child sample     | 3                     |
+| number of estimators | 1000                  |
+| number of leaves     | 74                    |
+| regularization alpha | 0.0033803043003857677 |
+| regularization lambda| 0.7013136087939289    |
+| objective            | binary                |  
 
 ## Authors
 
