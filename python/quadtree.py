@@ -1,5 +1,5 @@
 from typing import List, Dict, Tuple
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from time import sleep
 import json
 
