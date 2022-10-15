@@ -1,4 +1,4 @@
-<h1 align='center'> QUADTREE - guanine quadruplex prediction model</h1>
+<h1 align='center'> QUADTREE</h1>
 <br />
 <div align="center">
     <img src="https://img.shields.io/badge/Quadtree v1.0.0-green?style=for-the-badge" alt='package_version'/>
@@ -6,7 +6,18 @@
 </div>
 <br />
 
-The Quadtree is a gradient-boosted decision tree model used to predict guanine quadruplexes inside DNA sequences. It's developed on top of the LightGBM python library. Each sequence base is encoded based on a given encoding prescription. The model was trained to be used with a moving window and analyses the whole sequence.
+The Quadtree is a gradient-boosted decision tree model used to predict guanine quadruplexes in DNA sequences. It's developed on top of the LightGBM python library. Each sequence base is encoded based on a given encoding prescription. The model was trained to be used with a sliding window and analyses the whole sequence. Machine learning model can be used as python script or thru preview website [quadtree.vercel.app](https://quadtree.vercel.app/)
+
+## Repository structure
+
+```
+quadtree
+    └───web -> preview website source code
+    └───python
+        └─── model -> lightgbm model params
+        └─── train -> example files how training was performed
+        └─── quadtree.py -> predictor
+```
 
 ## Requirements
 
@@ -23,7 +34,7 @@ Before using install the requirements:
 
 ## Usage
 
-Instantiate the model
+### Create model instance
 
 ```python
   from quadtree import Quadtree
@@ -31,11 +42,11 @@ Instantiate the model
   model = Quadtree()
 ```
 
-Run analysis
+### Run analysis - algorithm inputs
 
-- [x] insert sequence as a string
-- [x] set threshold (recommended values is 0.2)
-- [x] insert path to quadnet model
+- sequence as a string (maximum length is not limited)
+- threshold (recommended values is 0.2)
+- quadnet model file path
 
 ```python
 result = quadtree.analyse(
@@ -59,21 +70,7 @@ df = pd.DataFrame(result)
 |  1 |       1 |       1184 | GAGGCAGCACAGAAAACAGTCCATTAGGGGAGCGGCTGGAGGTGGATACAGAGTTAAGTCCACGGTTACAAGAAATATCTTTAAATAGTGGGCAGA                                                                                                                                                                              |       96 |
 |  2 |       2 |       1389 | ATGTAGTGGCGGCAGTACGGAGGCTATAGACAACGGGGGCACAGAGGGCAACAACAGCAGTGTAGACGGTACAAGTGACAATAGCAATATAGAAAATGTAAATCCAC                                                                                                                                                                   |      107 |
 |  3 |       3 |       1635 | AGATTGGGTTACAGCTATATTTGGAGTAAACCCAACAATAGCAGAAGGATTTAAAACACTAATACAGCCATTTAT                                                                                                                                                                                                   |       75 |
-|  4 |       4 |       2229 | AATAGATGAAGGGGGAGATTGGAGACCAATAGTGCAATTCCTGCGATACCAACAAATAGAGTTTATAACATTTTTAG                                                                                                                                                                                                 |       77 |
-|  5 |       5 |       2302 | TTAGGAGCCTTAAAATCATTTTTAAAAGGAACCCCCAAAAAAAATTGTTTAGTATTTTGTGGACCAGCAAATACAGGAAAAT                                                                                                                                                                                            |       82 |
-|  6 |       6 |       3249 | CTGATGCAGGAACATGGGACAAAACCGCTACCTGTGTAAGTCACAGGGGATTGTATTATGTAAAGGAAGGGTACAACACGTT                                                                                                                                                                                            |       82 |
-|  7 |       7 |       3344 | AAAAGTGAATGTGAAAAATATGGGAACACAGGTACGTGGGAAGTACATTTTGGGAATAATGTAATTGATTGTAATGACTCTATGTGCAGTACCA                                                                                                                                                                                |       94 |
-|  8 |       8 |       3459 | CTCAGCTTGTTAAACAGCTACAGCACACCCCCTCACCGTATTCCAGCACCGTGTCCGTGGGCACCGCAAAGACCTACGGCCAGACGTCGGCTGCTACACG                                                                                                                                                                          |      100 |
-|  9 |       9 |       3591 | ATTGTGGACCTGTCAACCCACTTCTCGGTGCAGCTACACCTACAGGCAACAACAAAAGACGGAAACTCTGTAGTG                                                                                                                                                                                                   |       75 |
-| 10 |      10 |       4392 | TGGTATATTTTTGGGTGGACTTGGCATAGGTACTGGCAGTGGTACAGGGGGTCGTACAGGGTACATTCCATTGGGTGGGCGTTCCAATACAGTGGTGGATGTTGGTCCTACACGTCCCCCAGTGGTTATTGAACCTGTGGGCCCCACAGACCCATCTATTGTTACATTAATAGAGGACTCCAGTGTGGTTACATCAGGTGCACCTAGGC                                                             |      209 |
-| 11 |      11 |       4734 | TCCGTCCATTATTGAAGTTCCACAAACTGGGGAGGTGGCAGGTAATGTATTTGTTGGTACCCCTACATCTGGAACACATGGGTATGAGGAAATACCTTTACAAACATTTGCTTCTTCTGGTACGGGGGAGGAACCCATTAGTAGTACCCCATTGCCTACTGTGCGGCGTGTAGCAGGTCCCCGCCTTTACAGTAGGGCCTACCAACAAGTGTCAGTGGCTAACCCTGAGTTTCTTACACGTCCATCCTCTTTAATTACATATGACAACC |      269 |
-| 12 |      12 |       5160 | TACCCGCAGCGGTACACAAATAGGTGCTAGGGTTCACTTTTATCATGATATAAGTCCTATTGCACCTTCCCCAGA                                                                                                                                                                                                   |       75 |
-| 13 |      13 |       5379 | TTCTGCCTCTTCCTATAGTAATGTAACGGTCCCTTTAACCTCCTCTTGGGATGTGCCTGTATACACGGGTCCTGATATTACATTACCATCTACTACCTCTGTATG                                                                                                                                                                     |      105 |
-| 14 |      14 |       5477 | CTGTATGGCCCATTGTATCACCCACGGCCCCTGCCTCTACACAGTATATTGGTATACATGGTACACATTATTATTTGT                                                                                                                                                                                                |       78 |
-| 15 |      15 |       5744 | GTTGGTAATCCATATTTTAGGGTTCCTGCAGGTGGTGGCAATAAGCAGGATATTCCTAAGGTTTCTGCATACCAATATAGAG                                                                                                                                                                                            |       82 |
-| 16 |      16 |       6063 | ATAAGCAGACACAGTTATGTATTTTGGGCTGTGCCCCTGCTATTGGGGAACACTGGGCTAAAGGCACTGCTTGTAAATCGCGTCCTTTATCACAGGGCGATTGCCCCCCTTTAGAACTTAAAAACACAGTTTTGGAAGATGGTGATATGGTAGATACTGGATATGGTG                                                                                                      |      168 |
-| 17 |      17 |       6458 | CCTGCTTCACCTGGCAGCTGTGTGTATTCTCCCTCTCCAAGTGGCTCTATTGTTACCTCTGACTCCCAGTTGTTTAATAAACCATATTGGTTACA                                                                                                                                                                               |       95 |
-| 18 |      18 |       6789 | ATAGTATGAATAGCAGTATTTTAGAGGATTGGAACTTTGGTGTTCCCCCCCCCCCAACTACTAGTTTGGTGGATACATATCGTTTTGTACAATCTGTTGCTATTACCTGTCAAAAGGATGCTGC                                                                                                                                                  |      124 |
+|  4 |       4 |       2229 | AATAGATGAAGGGGGAGATTGGAGACCAATAGTGCAATTCCTGCGATACCAACAAATAGAGTTTATAACATTTTTAG                                                                                                                                                                                                 |       77 |                                                                                                                        
 
 
 ## Authors
