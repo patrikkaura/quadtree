@@ -1,4 +1,4 @@
-name: QUADTREE WEB CI/CD
+name: QUADTREE WEB - GITHUB ACTIONS
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
         - master
 
 jobs:
-  check:
+  lint:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -20,35 +20,41 @@ jobs:
     steps:
       - name: git checkout
         uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2.0.1
-        name: pnpm install
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: true
+      - name: npm install
+        run: npm ci
       - name: lint
-        run: pnpm lint
-      - name: prettier
-        run: pnpm prettier
-
-  test:
+        run: npm run lint
+  
+  prettier:
     runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: ./web
+    defaults:
+      run:
+        working-directory: ./web
     strategy:
       matrix:
         node-version: [16.x]
     steps:
       - name: git checkout
         uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2.0.1
-        name: pnpm install
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: true
+      - name: npm install
+        run: npm ci
+      - name: prettier
+        run: npm run prettier
+
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./web
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v2
+      - name: npm install
+        run: npm ci
       - name: jest
-        run: pnpm test -- --coverage
+        run: npm run test -- --coverage
       - name: jest:coverage
         uses: codecov/codecov-action@v3

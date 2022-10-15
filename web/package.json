@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "quadtree-web",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -30,7 +30,6 @@
     "@trpc/react": "10.0.0-proxy-beta.15",
     "@trpc/server": "10.0.0-proxy-beta.15",
     "@types/styled-components": "^5.1.26",
-    "add": "^2.0.6",
     "chart.js": "^3.9.1",
     "material-react-table": "^1.2.9",
     "next": "12.3.1",
