@@ -3,6 +3,9 @@
 <div align="center">
     <img src="https://img.shields.io/badge/Quadtree v1.0.0-green?style=for-the-badge" alt='package_version'/>
     <img src="https://img.shields.io/badge/python 3.7+-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt='python_version'/>
+    <img src="https://img.shields.io/badge/node.js 16+-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt='node_js_version'/>
+    <img src="https://img.shields.io/badge/react 18+-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt='react'/>
+    <img src="https://img.shields.io/badge/nextjs 12+-black?style=for-the-badge&logo=nextjs" alt='nextjs'/>
 </div>
 <br />
 
