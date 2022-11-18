@@ -75,6 +75,11 @@ df = pd.DataFrame(result)
 |  3 |       3 |       1635 | AGATTGGGTTACAGCTATATTTGGAGTAAACCCAACAATAGCAGAAGGATTTAAAACACTAATACAGCCATTTAT                                                                                                                                                                                                   |       75 |
 |  4 |       4 |       2229 | AATAGATGAAGGGGGAGATTGGAGACCAATAGTGCAATTCCTGCGATACCAACAAATAGAGTTTATAACATTTTTAG                                                                                                                                                                                                 |       77 |                                                                                                                        
 
+## Model scheme
+
+![LAYOUT_LEFT_RIGHT Quadtree](https://user-images.githubusercontent.com/94244479/202798752-90b77a9c-7057-4437-8670-23681301bda2.png)
+
+
 ## Training parameters
 
 These parameter were used to train lightgbm model
