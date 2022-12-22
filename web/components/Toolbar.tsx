@@ -17,7 +17,7 @@ export function Toolbar() {
             <Typography variant="h6" component="div">
               QUADTREE - PREVIEW PAGE
             </Typography>
-            <Chip label="v1.0.0" color="default" />
+            <Chip label="v1.1.0" color="default" />
           </Stack>
           <IconButton href="https://github.com/patrikkaura/quadtree">
             <GitHubIcon color="action" />
