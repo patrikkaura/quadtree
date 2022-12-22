@@ -8,8 +8,8 @@ describe("createIntervals", () => {
         { index: 100, score: 1 },
       ])
     ).toEqual([
-      [1, 51],
-      [100, 150],
+      [1, 3],
+      [100, 102],
     ]);
   });
 });

@@ -6,8 +6,8 @@ from lightgbm import Booster
 
 
 class QuadTree():
-    _FIXED_WINDOW_SIZE: int = 50
-    _MERGING_INTERVAL_LENGTH: int = 25
+    _FIXED_WINDOW_SIZE: int = 25
+    _MERGING_INTERVAL_LENGTH: int = 2
     _SEQUENCE_CONVERSION = {'G': -1, 'C': 1}
 
     def _sequence_convertor(self, *, sequence: str) -> np.array:

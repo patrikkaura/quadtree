@@ -8,9 +8,14 @@ export type Props = {
 };
 
 const BASE_GROUP_STYLE = {
-  fontSize: 20,
+  fontSize: 22,
   fontWeight: 500,
   borderBottom: "1px solid black",
+};
+
+const BASE_NUCLEIC_STYLE = {
+  fontSize: 22,
+  fontWeight: 500,
 };
 
 export function Sequence({ index, sequence }: Props) {
@@ -19,25 +24,32 @@ export function Sequence({ index, sequence }: Props) {
   const sequenceComponents = useMemo(
     () =>
       grouped.map((group, index) => {
-        if (group[0] === "G" && group.length > 1) {
+        if ((group.length > 1 && group[0] === "C") || group[0] === "G") {
+          const color = group[0] === "C" ? "#6786C6" : "#ff5e7c";
+
           return (
             <span
               key={index}
               style={{
                 ...BASE_GROUP_STYLE,
-                color: "#ff5e7c",
+                color,
               }}
             >
               {group}
             </span>
           );
-        } else if (group[0] === "C" && group.length > 1) {
+        } else if (
+          (group.length === 1 && group[0] === "G") ||
+          group[0] === "C"
+        ) {
+          const color = group[0] === "C" ? "#bf5a60" : "#546ba8";
+
           return (
             <span
               key={index}
               style={{
-                ...BASE_GROUP_STYLE,
-                color: "#6786C6",
+                ...BASE_NUCLEIC_STYLE,
+                color,
               }}
             >
               {group}

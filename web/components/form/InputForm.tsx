@@ -89,7 +89,7 @@ export function InputForm({
             onChange={handleSetThreshold}
             InputLabelProps={{ shrink: true }}
             helperText={
-              "Threshold has to be between 0 and 1. The recommended value is 0.2"
+              "Threshold has to be between 0 and 1. The recommended value is 0.9 (probability of quadruplex existence in given window)."
             }
             error={inputError.threshold}
           />
