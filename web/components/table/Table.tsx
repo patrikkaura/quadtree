@@ -35,7 +35,7 @@ export function Table({ data }: Props) {
       {
         accessorFn: (originalRow) => originalRow.meanScore,
         id: "meanScore",
-        header: "Quadtree score",
+        header: "Avg. score",
         size: 10,
         Cell: ({ cell }) => cell.getValue<number>().toFixed(2),
       },

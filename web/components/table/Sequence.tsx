@@ -7,15 +7,14 @@ export type Props = {
   sequence: string;
 };
 
-const BASE_GROUP_STYLE = {
-  fontSize: 22,
+const BASE_NUCLEIC_STYLE = {
+  fontSize: 21,
   fontWeight: 500,
-  borderBottom: "1px solid black",
 };
 
-const BASE_NUCLEIC_STYLE = {
-  fontSize: 22,
-  fontWeight: 500,
+const BASE_GROUP_STYLE = {
+  ...BASE_NUCLEIC_STYLE,
+  borderBottom: "1px solid black",
 };
 
 export function Sequence({ index, sequence }: Props) {
@@ -24,7 +23,7 @@ export function Sequence({ index, sequence }: Props) {
   const sequenceComponents = useMemo(
     () =>
       grouped.map((group, index) => {
-        if ((group.length > 1 && group[0] === "C") || group[0] === "G") {
+        if (group.length > 1 && (group[0] === "C" || group[0] === "G")) {
           const color = group[0] === "C" ? "#6786C6" : "#ff5e7c";
 
           return (
@@ -39,10 +38,10 @@ export function Sequence({ index, sequence }: Props) {
             </span>
           );
         } else if (
-          (group.length === 1 && group[0] === "G") ||
-          group[0] === "C"
+          group.length === 1 &&
+          (group[0] === "G" || group[0] === "C")
         ) {
-          const color = group[0] === "C" ? "#bf5a60" : "#546ba8";
+          const color = group[0] === "C" ? "#546ba8" : "#bf5a60";
 
           return (
             <span
