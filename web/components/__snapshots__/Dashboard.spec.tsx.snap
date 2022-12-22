@@ -701,9 +701,9 @@ exports[`Dashboard should match snapshot 1`] = `
                       >
                         <div
                           class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-8uhtka"
-                          title="Quadtree score"
+                          title="Avg. score"
                         >
-                          Quadtree score
+                          Avg. score
                         </div>
                         <span
                           aria-label="Unsorted"
