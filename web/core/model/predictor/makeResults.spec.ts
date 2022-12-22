@@ -12,7 +12,7 @@ describe("makeResults", () => {
       {
         index: 0,
         interval: [1, 50],
-        length: 49,
+        length: 79,
         meanScore: 0.2,
         scores: [0.2],
         sequence: "TATATATATATATATATATATATATATATATATATATATATATATAT",

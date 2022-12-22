@@ -10,7 +10,6 @@ describe("groupNucleicPairs", () => {
       ["A"],
       ["G", "G", "G", "G", "G"],
       ["A", "A"],
-      ["C", "C", "C"],
     ]);
   });
 });

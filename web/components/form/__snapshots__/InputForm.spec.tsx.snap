@@ -68,7 +68,7 @@ exports[`InputForm should render 1`] = `
         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
         id=":r0:-helper-text"
       >
-        Sequence length (bp) has to be at least 50bp. But maximum up to 10000bp. Current length: 0
+        Sequence length (bp) has to be at least 25bp. But maximum up to 500000bp. Current length: 0
       </p>
     </div>
     <div

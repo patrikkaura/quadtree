@@ -508,7 +508,7 @@ exports[`Table should render 1`] = `
                 T
                 A
                 <span
-                  style="font-size: 20px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
+                  style="font-size: 22px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
                 >
                   G
                   G
@@ -518,7 +518,6 @@ exports[`Table should render 1`] = `
                 T
                 A
                 T
-                A
               </span>
             </td>
           </tr>
@@ -560,7 +559,7 @@ exports[`Table should render 1`] = `
                 A
                 T
                 <span
-                  style="font-size: 20px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
+                  style="font-size: 22px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
                 >
                   G
                   G
@@ -569,7 +568,7 @@ exports[`Table should render 1`] = `
                 T
                 A
                 <span
-                  style="font-size: 20px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
+                  style="font-size: 22px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
                 >
                   G
                   G
@@ -579,7 +578,6 @@ exports[`Table should render 1`] = `
                 T
                 A
                 T
-                A
               </span>
             </td>
           </tr>

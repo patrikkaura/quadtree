@@ -15,7 +15,7 @@ import { Toolbar } from "./Toolbar";
 
 export function Dashboard() {
   const [sequence, setSequence] = useState(DEFAULT_SEQUENCE);
-  const [threshold, setThreshold] = useState(0.2);
+  const [threshold, setThreshold] = useState(0.9);
 
   const quadtreeMutation = trpc.quadtree.useMutation();
 

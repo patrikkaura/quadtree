@@ -1,4 +1,4 @@
-import { calcScore } from "./calcScore";
+import { score } from "./model";
 import type { ConvertedSequence } from "./sequenceConvertor";
 
 export type Prediction = {
@@ -11,7 +11,7 @@ export function makePrediction(
   threshold: number
 ) {
   const calculatedScores = convertedSequences.map(
-    (convertedSequence) => calcScore(convertedSequence)[1]
+    (convertedSequence) => score(convertedSequence)[1]
   );
 
   return calculatedScores

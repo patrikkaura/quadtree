@@ -1,8 +1,8 @@
 import { makePrediction } from "./makePrediction";
 import { sequenceConvertor } from "./sequenceConvertor";
 
-jest.mock("./calcScore", () => ({
-  calcScore: jest.fn().mockImplementation(() => 0.5),
+jest.mock("./model", () => ({
+  score: jest.fn().mockImplementation(() => 0.5),
 }));
 
 describe("makePrediction", () => {
