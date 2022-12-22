@@ -28,7 +28,7 @@ exports[`Dashboard should match snapshot 1`] = `
               <span
                 class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
               >
-                v1.0.0
+                v1.1.0
               </span>
             </div>
           </div>
@@ -194,7 +194,7 @@ exports[`Dashboard should match snapshot 1`] = `
                   class="MuiFormHelperText-root Mui-disabled MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
                   id=":r1:-helper-text"
                 >
-                  Threshold has to be between 0 and 1. The recommended value is 0.2
+                  Threshold has to be between 0 and 1. The recommended value is 0.9 (probability of quadruplex existence in given window).
                 </p>
               </div>
               <button
