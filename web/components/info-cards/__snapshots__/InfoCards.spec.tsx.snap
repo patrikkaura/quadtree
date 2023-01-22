@@ -3,102 +3,77 @@
 exports[`InfoCards should render 1`] = `
 <div>
   <div
-    class="css-e53awj-MuiStack-root"
+    class="flex flex-col md:flex-row gap-4"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-      style="width: 200px; border-top: 5px solid; border-color: #98ddca;"
+      class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
     >
-      <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      <h1
+        class="text-md text-nord2"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-        >
-          Sequence length
-        </p>
-        <p
-          class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-        >
-          100
-        </p>
-      </div>
+        Sequence length
+      </h1>
+      <h2
+        class="text-3xl font-bold text-nord3"
+      >
+        100
+      </h2>
     </div>
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-      style="width: 200px; border-top: 5px solid; border-color: #98dd99;"
+      class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
     >
-      <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      <h1
+        class="text-md text-nord2"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-        >
-          Threshold
-        </p>
-        <p
-          class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-        >
-          0.5
-        </p>
-      </div>
+        Threshold
+      </h1>
+      <h2
+        class="text-3xl font-bold text-nord3"
+      >
+        0.5
+      </h2>
     </div>
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-      style="width: 200px; border-top: 5px solid; border-color: #d5ecc2;"
+      class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
     >
-      <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      <h1
+        class="text-md text-nord2"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-        >
-          Frequency per thousand
-        </p>
-        <p
-          class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-        >
-          10
-        </p>
-      </div>
+        Frequency per thousand
+      </h1>
+      <h2
+        class="text-3xl font-bold text-nord3"
+      >
+        10
+      </h2>
     </div>
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-      style="width: 200px; border-top: 5px solid; border-color: #ffd3b4;"
+      class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
     >
-      <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      <h1
+        class="text-md text-nord2"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-        >
-          GC count
-        </p>
-        <p
-          class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-        >
-          10
-        </p>
-      </div>
+        GC count
+      </h1>
+      <h2
+        class="text-3xl font-bold text-nord3"
+      >
+        10
+      </h2>
     </div>
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-      style="width: 200px; border-top: 5px solid; border-color: #ffaaa7;"
+      class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
     >
-      <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      <h1
+        class="text-md text-nord2"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-        >
-          Number of quadruplexes
-        </p>
-        <p
-          class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-        >
-          5
-        </p>
-      </div>
+        Number of quadruplexes
+      </h1>
+      <h2
+        class="text-3xl font-bold text-nord3"
+      >
+        5
+      </h2>
     </div>
   </div>
 </div>

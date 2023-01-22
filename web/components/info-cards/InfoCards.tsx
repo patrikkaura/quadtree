@@ -1,5 +1,4 @@
 import { QuadtreeData } from "@components/types";
-import Stack from "@mui/material/Stack";
 import { useMemo } from "react";
 
 import { Card } from "./Card";
@@ -22,27 +21,19 @@ export function InfoCards({ threshold, stats }: Props) {
       {
         header: "Sequence length",
         content: sequenceLength,
-        width: 200,
-        color: "#98DDCA",
       },
       {
         header: "Threshold",
         content: threshold,
-        width: 200,
-        color: "#98DD99",
       },
       {
         header: "Frequency per thousand",
         content: frequencyPerThousand,
-        width: 200,
-        color: "#D5ECC2",
       },
-      { header: "GC count", content: gcCount, width: 200, color: "#FFD3B4" },
+      { header: "GC count", content: gcCount },
       {
         header: "Number of quadruplexes",
         content: numberOfQuadruplexes,
-        width: 200,
-        color: "#FFAAA7",
       },
     ],
     [
@@ -55,10 +46,10 @@ export function InfoCards({ threshold, stats }: Props) {
   );
 
   return (
-    <Stack direction="row" spacing={2}>
+    <div className="flex flex-col md:flex-row gap-4">
       {cardData.map((data, index) => (
         <Card key={index} {...data} />
       ))}
-    </Stack>
+    </div>
   );
 }

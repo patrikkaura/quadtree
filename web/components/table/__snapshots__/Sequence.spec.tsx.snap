@@ -13,7 +13,8 @@ exports[`Sequence should render 1`] = `
     T
     A
     <span
-      style="font-size: 21px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
+      class="text-red-600"
+      style="font-size: 21px; font-weight: 500; border-bottom: 1px solid black;"
     >
       G
       G
@@ -31,7 +32,8 @@ exports[`Sequence should render 1`] = `
     T
     A
     <span
-      style="font-size: 21px; font-weight: 500; border-bottom: 1px solid black; color: rgb(255, 94, 124);"
+      class="text-red-600"
+      style="font-size: 21px; font-weight: 500; border-bottom: 1px solid black;"
     >
       G
       G

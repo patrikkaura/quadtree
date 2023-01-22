@@ -6,8 +6,6 @@ describe("Card", () => {
   let props: Props = {
     header: "header",
     content: "random-content",
-    width: 200,
-    color: "#000000",
   };
 
   it("should render", () => {

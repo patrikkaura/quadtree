@@ -2,177 +2,85 @@
 
 exports[`InputForm should render 1`] = `
 <div>
-  <h5
-    class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
-  >
-    Input params
-  </h5>
   <div
-    class="css-19qjufr-MuiStack-root"
-    style="padding-top: 30px;"
+    class="border shadow-sm rounded-xl py-6 px-10"
   >
-    <div
-      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-      data-testid="sequence-input"
+    <h1
+      class="text-3xl"
     >
-      <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-        data-shrink="true"
-        for=":r0:"
-        id=":r0:-label"
-      >
-        Sequence
-        <span
-          aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
-        >
-           
-          *
-        </span>
-      </label>
-      <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root"
-      >
-        <textarea
-          aria-describedby=":r0:-helper-text"
-          aria-invalid="true"
-          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
-          id=":r0:"
-          required=""
-          rows="10"
-          style="height: 0px; overflow: hidden;"
-        />
-        <textarea
-          aria-hidden="true"
-          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
-          readonly=""
-          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding: 0px; width: 100%;"
-          tabindex="-1"
-        />
-        <fieldset
-          aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-        >
-          <legend
-            class="css-14lo706"
-          >
-            <span>
-              Sequence
-               
-              *
-            </span>
-          </legend>
-        </fieldset>
-      </div>
-      <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
-        id=":r0:-helper-text"
-      >
-        Sequence length (bp) has to be at least 25bp. But maximum up to 500000bp. Current length: 0
-      </p>
-    </div>
+      Input params
+    </h1>
     <div
-      class="css-1p5q5e5-MuiStack-root"
+      class="flex flex-col md:flex-row gap-4 pt-8"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-        data-testid="threshold-input"
+        class="flex-2"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="true"
-          for=":r1:"
-          id=":r1:-label"
-        >
-          Threshold
-          <span
-            aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
-          >
-             
-            *
-          </span>
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="flex flex-col gap-2"
         >
-          <input
-            aria-describedby=":r1:-helper-text"
-            aria-invalid="true"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id=":r1:"
+          <label
+            class="text-md font-medium"
+          >
+            Sequence
+          </label>
+          <textarea
+            class="p-2 border-2 border-nord5 rounded-md disabled:opacity-50"
+            data-testid="sequence-input"
+            name="sequence"
             required=""
+            rows="10"
+          />
+          <p
+            class="text-sm font-light"
+          >
+            Sequence length (bp) has to be at least 25bp. But maximum up to 500000bp. Current length: 0
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex-1"
+      >
+        <div
+          class="flex flex-col gap-2"
+        >
+          <label
+            class="text-md font-medium"
+          >
+            Threshold
+          </label>
+          <input
+            class="p-2 border-2 border-nord5 rounded-md disabled:opacity-50"
+            data-testid="threshold-input"
             type="number"
             value="0"
           />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <p
+            class="text-sm font-light"
           >
-            <legend
-              class="css-14lo706"
-            >
-              <span>
-                Threshold
-                 
-                *
-              </span>
-            </legend>
-          </fieldset>
+            Threshold has to be between 0 and 1. The recommended value is 0.9 (probability of quadruplex existence in given window).
+          </p>
+          <button
+            class="border-2 border-nord14 p-2 text-gray-700 rounded-lg disabled:opacity-50 hover:bg-nord14 hover:text-white"
+            data-testid="start-button"
+            disabled=""
+          >
+            START ANALYSIS
+          </button>
+          <button
+            class="border-2 border-nord11 p-2 text-gray-700 rounded-lg hover:bg-nord11 hover:text-white"
+            data-testid="reset-button"
+            disabled=""
+          >
+            RESET ANALYSIS
+          </button>
         </div>
-        <p
-          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
-          id=":r1:-helper-text"
-        >
-          Threshold has to be between 0 and 1. The recommended value is 0.2
-        </p>
       </div>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-outlined MuiButton-outlinedInherit MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorInherit Mui-disabled MuiButton-root MuiLoadingButton-root MuiButton-outlined MuiButton-outlinedInherit MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorInherit css-kpoh2l-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root"
-        data-testid="start-button"
-        disabled=""
-        id=":r2:"
-        tabindex="-1"
-        type="button"
-      >
-        START ANALYSIS
-      </button>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeMedium MuiButton-outlinedSizeMedium Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-180lf2n-MuiButtonBase-root-MuiButton-root"
-        data-testid="reset-button"
-        disabled=""
-        tabindex="-1"
-        type="button"
-      >
-        RESET ANALYSIS
-      </button>
     </div>
   </div>
 </div>
 `;
 
-exports[`InputForm should show input errors when threshold and sequence hits limits 1`] = `
-<input
-  aria-describedby=":rd:-helper-text"
-  aria-invalid="true"
-  class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-  id=":rd:"
-  required=""
-  type="number"
-  value="-1"
-/>
-`;
+exports[`InputForm should show input errors when threshold and sequence hits limits 1`] = `null`;
 
-exports[`InputForm should show input errors when threshold and sequence hits limits 2`] = `
-<textarea
-  aria-describedby=":rc:-helper-text"
-  aria-invalid="true"
-  class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
-  id=":rc:"
-  required=""
-  rows="10"
-  style="height: 0px; overflow: hidden;"
->
-  ATATA
-</textarea>
-`;
+exports[`InputForm should show input errors when threshold and sequence hits limits 2`] = `null`;

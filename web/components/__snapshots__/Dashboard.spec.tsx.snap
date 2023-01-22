@@ -3,357 +3,225 @@
 exports[`Dashboard should match snapshot 1`] = `
 <div>
   <div
-    style="max-width: 1200px; margin: auto;"
+    class="m-auto max-w-6xl"
   >
     <div
-      class="MuiBox-root css-i9gxme"
-    >
-      <header
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionStatic css-7reuwd-MuiPaper-root-MuiAppBar-root"
-      >
-        <div
-          class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
-        >
-          <div
-            class="css-163pxij-MuiStack-root"
-          >
-            <div
-              class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
-            >
-              QUADTREE - PREVIEW PAGE
-            </div>
-            <div
-              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-gac2fo-MuiChip-root"
-            >
-              <span
-                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-              >
-                v1.1.0
-              </span>
-            </div>
-          </div>
-          <a
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
-            href="https://github.com/patrikkaura/quadtree"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeMedium css-11pbyhm-MuiSvgIcon-root"
-              data-testid="GitHubIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"
-              />
-            </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
-          </a>
-        </div>
-      </header>
-      <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
-      />
-    </div>
-    <div
-      class="css-pnq1z9-MuiStack-root"
-      style="padding: 30px;"
+      class="flex flex-row items-center justify-between p-4 border-b-nord-14 border-b-2"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="flex flex-row gap-2 items-center"
       >
-        <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        <h1
+          class="text-xl font-medium text-gray-800"
         >
-          <h5
-            class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
-          >
-            Input params
-          </h5>
+          QUADTREE
+        </h1>
+        <span
+          class="bg-nord7 px-2 py-1 w-15 text-white text-sm rounded-full"
+        >
+          v1.1.0
+        </span>
+      </div>
+      <a
+        class="hover:bg-nord6 hover:rounded-full p-2"
+        href="https://github.com/patrikkaura/quadtree"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium text-nord10 css-i4bv87-MuiSvgIcon-root"
+          data-testid="GitHubIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"
+          />
+        </svg>
+      </a>
+    </div>
+    <div
+      class="flex flex-col gap-10 p-10"
+    >
+      <div
+        class="border shadow-sm rounded-xl py-6 px-10"
+      >
+        <h1
+          class="text-3xl"
+        >
+          Input params
+        </h1>
+        <div
+          class="flex flex-col md:flex-row gap-4 pt-8"
+        >
           <div
-            class="css-19qjufr-MuiStack-root"
-            style="padding-top: 30px;"
+            class="flex-2"
           >
             <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-              data-testid="sequence-input"
+              class="flex flex-col gap-2"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                data-shrink="true"
-                for=":r0:"
-                id=":r0:-label"
+                class="text-md font-medium"
               >
                 Sequence
-                <span
-                  aria-hidden="true"
-                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
-                >
-                   
-                  *
-                </span>
               </label>
-              <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root"
+              <textarea
+                class="p-2 border-2 border-nord5 rounded-md disabled:opacity-50"
+                data-testid="sequence-input"
+                disabled=""
+                name="sequence"
+                required=""
+                rows="10"
               >
-                <textarea
-                  aria-describedby=":r0:-helper-text"
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiOutlinedInput-input Mui-disabled MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
-                  disabled=""
-                  id=":r0:"
-                  required=""
-                  rows="10"
-                  style="height: 0px; overflow: hidden;"
-                >
-                  ATTAATACTTTTAACAATTGTAGTATATAAAAAAGGGAGTAACCGAAAACGGTCGGGACCGAAAACGGTGTATATAAAAGATGTGAGAAACACACCACAATACTATGGCGCGCTTTGAGGATCCAACACGGCGACCCTACAAGCTACCTGATCTGTGCACGGAACTGAACACTTCACTGCAAGACATAGAAATAACCTGTGTATATTGCAAGACAGTATTGGAACTTACAGAGGTATTTGAATTTGCATTTAAAGATTTATTTGTGGTGTATAGAGACAGTATACCCCATGCTGCATGCCATAAATGTATAGATTTTTATTCTAGAATTAGAGAATTAAGACATTATTCAGACTCTGTGTATGGAGACACATTGGAAAAACTAACTAACACTGGGTTATACAATTTATTAATAAGGTGCCTGCGGTGCCAGAAACCGTTGAATCCAGCAGAAAAACTTAGACACCTTAATGAAAAACGACGATTTCACAACATAGCTGGGCACTATAGAGGCCAGTGCCATTCGTGCTGCAACCGAGCACGACAGGAACGACTCCAACGACGCAGAGAAACACAAGTATAATATTAAGTATGCATGGACCTAAGGCAACATTGCAAGACATTGTATTGCATTTAGAGCCCCAAAATGAAATTCCGGTTGACCTTCTATGTCACGAGCAATTAAGCGACTCAGAGGAAGAAAACGATGAAATAGATGGAGTTAATCATCAACATTTACCAGCCCGACGAGCCGAACCACAACGTCACACAATGTTGTGTATGTGTTGTAAGTGTGAAGCCAGAATTGAGCTAGTAGTAGAAAGCTCAGCAGACGACCTTCGAGCATTCCAGCAGCTGTTTCTGAACACCCTGTCCTTTGTGTGTCCGTGGTGTGCATCCCAGCAGTAAGCAACAATGGCTGATCCAGAAGGTACAGACGGGGAGGGCACGGGTTGTAACGGCTGGTTTTATGTACAAGCTATTGTAGACAAAAAAACAGGAGATGTAATATCAGATGACGAGGACGAAAATGCAACAGACACAGGGTCGGATATGGTAGATTTTATTGATACACAAGGAACATTTTGTGAACAGGCAGAGCTAGAGACAGCACAGGCATTGTTCCATGCGCAGGAGGTCCACAATGATGCACAAGTGTTGCATGTTTTAAAACGAAAGTTTGCAGGAGGCAGCACAGAAAACAGTCCATTAGGGGAGCGGCTGGAGGTGGATACAGAGTTAAGTCCACGGTTACAAGAAATATCTTTAAATAGTGGGCAGAAAAAGGCAAAAAGGCGGCTGTTTACAATATCAGATAGTGGCTATGGCTGTTCTGAAGTGGAAGCAACACAGATTCAGGTAACTACAAATGGCGAACATGGCGGCAATGTATGTAGTGGCGGCAGTACGGAGGCTATAGACAACGGGGGCACAGAGGGCAACAACAGCAGTGTAGACGGTACAAGTGACAATAGCAATATAGAAAATGTAAATCCACAATGTACCATAGCACAATTAAAAGACTTGTTAAAAGTAAACAATAAACAAGGAGCTATGTTAGCAGTATTTAAAGACACATATGGGCTATCATTTACAGATTTAGTTAGAAATTTTAAAAGTGATAAAACCACGTGTACAGATTGGGTTACAGCTATATTTGGAGTAAACCCAACAATAGCAGAAGGATTTAAAACACTAATACAGCCATTTATATTATATGCCCATATTCAATGTCTAGACTGTAAATGGGGAGTATTAATATTAGCCCTGTTGCGTTACAAATGTGGTAAGAGTAGACTAACAGTTGCTAAAGGTTTAAGTACGTTGTTACACGTACCTGAAACTTGTATGTTAATTCAACCACCAAAATTGCGAAGTAGTGTTGCAGCACTATATTGGTATAGAACAGGAATATCAAATATTAGTGAAGTAATGGGAGACACACCTGAGTGGATACAAAGACTTACTATTATACAACATGGAATAGATGATAGCAATTTTGATTTGTCAGAAATGGTACAATGGGCATTTGATAATGAGCTGACAGATGAAAGCGATATGGCATTTGAATATGCCTTATTAGCAGACAGCAACAGCAATGCAGCTGCCTTTTTAAAAAGCAATTGCCAAGCTAAATATTTAAAAGATTGTGCCACAATGTGCAAACATTATAGGCGAGCCCAAAAACGACAAATGAATATGTCACAGTGGATACGATTTAGATGTTCAAAAATAGATGAAGGGGGAGATTGGAGACCAATAGTGCAATTCCTGCGATACCAACAAATAGAGTTTATAACATTTTTAGGAGCCTTAAAATCATTTTTAAAAGGAACCCCCAAAAAAAATTGTTTAGTATTTTGTGGACCAGCAAATACAGGAAAATCATATTTTGGAATGAGTTTTATACACTTTATACAAGGAGCAGTAATATCATTTGTGAATTCCACTAGTCATTTTTGGTTGGAACCGTTAACAGATACTAAGGTGGCCATGTTAGATGATGCAACGACCACGTGTTGGACATACTTTGATACCTATATGAGAAATGCGTTAGATGGCAATCCAATAAGTATTGATAGAAAGCACAAACCATTAATACAACTAAAATGTCCTCCAATACTACTAACCACAAATATACATCCAGCAAAGGATAATAGATGGCCATATTTAGAAAGTAGAATAACAGTATTTGAATTTCCAAATGCATTTCCATTTGATAAAAATGGCAATCCAGTATATGAAATAAATGACAAAAATTGGAAATGTTTTTTTGAAAGGACATGGTCCAGATTAGATTTGCACGAGGAAGAGGAAGATGCAGACACCGAAGGAAACCCTTTCGGAACGTTTAAGTTGCGTGCAGGACAAAATCATAGACCACTATGAAAATGACAGTAAAGACATAGACAGCCAAATACAGTATTGGCAACTAATACGTTGGGAAAATGCAATATTCTTTGCAGCAAGGGAACATGGCATACAGACATTAAACCACCAGGTGGTGCCAGCCTATAACATTTCAAAAAGTAAAGCACATAAAGCTATTGAACTGCAAATGGCCCTACAAGGCCTTGCACAAAGTCGATACAAAACCGAGGATTGGACACTGCAAGACACATGCGAGGAACTATGGAATACAGAACCTACTCACTGCTTTAAAAAAGGTGGCCAAACAGTACAAGTATATTTTGATGGCAACAAAGACAATTGTATGACCTATGTAGCATGGGACAGTGTGTATTATATGACTGATGCAGGAACATGGGACAAAACCGCTACCTGTGTAAGTCACAGGGGATTGTATTATGTAAAGGAAGGGTACAACACGTTTTATATAGAATTTAAAAGTGAATGTGAAAAATATGGGAACACAGGTACGTGGGAAGTACATTTTGGGAATAATGTAATTGATTGTAATGACTCTATGTGCAGTACCAGTGACGACACGGTATCCGCTACTCAGCTTGTTAAACAGCTACAGCACACCCCCTCACCGTATTCCAGCACCGTGTCCGTGGGCACCGCAAAGACCTACGGCCAGACGTCGGCTGCTACACGACCTGGACACTGTGGACTCGCGGAGAAGCAGCATTGTGGACCTGTCAACCCACTTCTCGGTGCAGCTACACCTACAGGCAACAACAAAAGACGGAAACTCTGTAGTGGTAACACTACGCCTATAATACATTTAAAAGGTGACAGAAACAGTTTAAAATGTTTACGGTACAGATTGCGAAAACATAGCGACCACTATAGAGATATATCATCCACCTGGCATTGGACAGGTGCAGGCAATGAAAAAACAGGAATACTGACTGTAACATACCATAGTGAAACACAAAGAACAAAATTTTTAAATACTGTTGCAATTCCAGATAGTGTACAAATATTGGTGGGATACATGACAATGTAATACATATGCTGTAGTACCAATATGTTATCACTTATTTTTTTATTTTGCTTTTGTGTATGCATGTATGTGTGCTGCCATGTCCCGCTTTTGCCATCTGTCTGTATGTGTGCGTATGCATGGGTATTGGTATTTGTGTATATTGTGGTAATAACGTCCCCTGCCACAGCATTCACAGTATATGTATTTTGTTTTTTATTGCCCATGTTACTATTGCATATACATGCTATATTGTCTTTACAGTAATTGTATAGGTTGTTTTATACAGTGTATTGTACATTGTATATTTTGTTTTATACCTTTTATGCTTTTTGTATTTTTGTAATAAAAGTATGGTATCCCACCGTGCCGCACGACGCAAACGGGCTTCGGTAACTGACTTATATAAAACATGTAAACAATCTGGTACATGTCCACCTGATGTTGTTCCTAAGGTGGAGGGCACCACGTTAGCAGATAAAATATTGCAATGGTCAAGCCTTGGTATATTTTTGGGTGGACTTGGCATAGGTACTGGCAGTGGTACAGGGGGTCGTACAGGGTACATTCCATTGGGTGGGCGTTCCAATACAGTGGTGGATGTTGGTCCTACACGTCCCCCAGTGGTTATTGAACCTGTGGGCCCCACAGACCCATCTATTGTTACATTAATAGAGGACTCCAGTGTGGTTACATCAGGTGCACCTAGGCCTACGTTTACTGGCACGTCTGGGTTTGATATAACATCTGCGGGTACAACTACACCTGCGGTTTTGGATATCACACCTTCGTCTACCTCTGTGTCTATTTCCACAACCAATTTTACCAATCCTGCATTTTCTGATCCGTCCATTATTGAAGTTCCACAAACTGGGGAGGTGGCAGGTAATGTATTTGTTGGTACCCCTACATCTGGAACACATGGGTATGAGGAAATACCTTTACAAACATTTGCTTCTTCTGGTACGGGGGAGGAACCCATTAGTAGTACCCCATTGCCTACTGTGCGGCGTGTAGCAGGTCCCCGCCTTTACAGTAGGGCCTACCAACAAGTGTCAGTGGCTAACCCTGAGTTTCTTACACGTCCATCCTCTTTAATTACATATGACAACCCGGCCTTTGAGCCTGTGGACACTACATTAACATTTGATCCTCGTAGTGATGTTCCTGATTCAGATTTTATGGATATTATCCGTCTACATAGGCCTGCTTTAACATCCAGGCGTGGGACTGTTCGCTTTAGTAGATTAGGTCAACGGGCAACTATGTTTACCCGCAGCGGTACACAAATAGGTGCTAGGGTTCACTTTTATCATGATATAAGTCCTATTGCACCTTCCCCAGAATATATTGAACTGCAGCCTTTAGTATCTGCCACGGAGGACAATGACTTGTTTGATATATATGCAGATGACATGGACCCTGCAGTGCCTGTACCATCGCGTTCTACTACCTCCTTTGCATTTTTTAAATATTCGCCCACTATATCTTCTGCCTCTTCCTATAGTAATGTAACGGTCCCTTTAACCTCCTCTTGGGATGTGCCTGTATACACGGGTCCTGATATTACATTACCATCTACTACCTCTGTATGGCCCATTGTATCACCCACGGCCCCTGCCTCTACACAGTATATTGGTATACATGGTACACATTATTATTTGTGGCCATTATATTATTTTATTCCTAAGAAACGTAAACGTGTTCCCTATTTTTTTGCAGATGGCTTTGTGGCGGCCTAGTGACAATACCGTATATCTTCCACCTCCTTCTGTGGCAAGAGTTGTAAATACCGATGATTATGTGACTCCCACAAGCATATTTTATCATGCTGGCAGCTCTAGATTATTAACTGTTGGTAATCCATATTTTAGGGTTCCTGCAGGTGGTGGCAATAAGCAGGATATTCCTAAGGTTTCTGCATACCAATATAGAGTATTTAGGGTGCAGTTACCTGACCCAAATAAATTTGGTTTACCTGATACTAGTATTTATAATCCTGAAACACAACGTTTAGTGTGGGCCTGTGCTGGAGTGGAAATTGGCCGTGGTCAGCCTTTAGGTGTTGGCCTTAGTGGGCATCCATTTTATAATAAATTAGATGACACTGAAAGTTCCCATGCCGCCACGTCTAATGTTTCTGAGGACGTTAGGGACAATGTGTCTGTAGATTATAAGCAGACACAGTTATGTATTTTGGGCTGTGCCCCTGCTATTGGGGAACACTGGGCTAAAGGCACTGCTTGTAAATCGCGTCCTTTATCACAGGGCGATTGCCCCCCTTTAGAACTTAAAAACACAGTTTTGGAAGATGGTGATATGGTAGATACTGGATATGGTGCCATGGACTTTAGTACATTGCAAGATACTAAATGTGAGGTACCATTGGATATTTGTCAGTCTATTTGTAAATATCCTGATTATTTACAAATGTCTGCAGATCCTTATGGGGATTCCATGTTTTTTTGCTTACGGCGTGAGCAGCTTTTTGCTAGGCATTTTTGGAATAGAGCAGGTACTATGGGTGACACTGTGCCTCAATCCTTATATATTAAAGGCACAGGTATGCCTGCTTCACCTGGCAGCTGTGTGTATTCTCCCTCTCCAAGTGGCTCTATTGTTACCTCTGACTCCCAGTTGTTTAATAAACCATATTGGTTACATAAGGCACAGGGTCATAACAATGGTGTTTGCTGGCATAATCAATTATTTGTTACTGTGGTAGATACCACTCCCAGTACCAATTTAACAATATGTGCTTCTACACAGTCTCCTGTACCTGGGCAATATGATGCTACCAAATTTAAGCAGTATAGCAGACATGTTGAGGAATATGATTTGCAGTTTATTTTTCAGTTGTGTACTATTACTTTAACTGCAGATGTTATGTCCTATATTCATAGTATGAATAGCAGTATTTTAGAGGATTGGAACTTTGGTGTTCCCCCCCCCCCAACTACTAGTTTGGTGGATACATATCGTTTTGTACAATCTGTTGCTATTACCTGTCAAAAGGATGCTGCACCGGCTGAAAATAAGGATCCCTATGATAAGTTAAAGTTTTGGAATGTGGATTTAAAGGAAAAGTTTTCTTTAGACTTAGATCAATATCCCCTTGGACGTAAATTTTTGGTTCAGGCTGGATTGCGTCGCAAGCCCACCATAGGCCCTCGCAAACGTTCTGCTCCATCTGCCACTACGTCTTCTAAACCTGCCAAGCGTGTGCGTGTACGTGCCAGGAAGTAATATGTGTGTGTGTATATATATATACATCTATTGTTGTGTTTGTATGTCCTGTGTTTGTGTTTGTTGTATGATTGCATTGTATGGTATGTATGGTTGTTGTTGTATGTTGTATGTTACTATATTTGTTGGTATGTGGCATTAAATAAAATATGTTTTGTGGTTCTGTGTGTTATGTGGTTGCGCCCTAGTGAGTAACAACTGTATTTGTGTTTGTGGTATGGGTGTTGCTTGTTGGGCTATATATTGTCCTGTATTTCAAGTTATAAAACTGCACACCTTACAGCATCCATTTTATCCTACAATCCTCCATTTTGCTGTGCAACCGATTTCGGTTGCCTTTGGCTTATGTCTGTGGTTTTCTGCACAATACAGTACGCTGGCACTATTGCAAACTTTAATCTTTTGGGCACTGCTCCTACATATTTTGAACAATTGGCGCGCCTCTTTGGCGCATATAAGGCGCACCTGGTATTAGTCATTTTCCTGTCCAGGTGCGCTACAACAATTGCTTGCATAACTATATCCACTCCCTAAGTAATAAAACTGCTTTTAGGCACATATTTTAGTTTGTTTTTACTTAAGCTAATTGCATACTTGGCTTGTACAACTACTTTCATGTCCAACATTCTGTCTACCCTTAACATGAACTATAATATGACTAAGCTGTGCATACATAGTTTATGCAACCGAAATAGGTTGGGCAGCACATACTATACTTTTC
-                </textarea>
-                <textarea
-                  aria-hidden="true"
-                  class="MuiInputBase-input MuiOutlinedInput-input Mui-disabled MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
-                  readonly=""
-                  style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding: 0px; width: 100%;"
-                  tabindex="-1"
-                />
-                <fieldset
-                  aria-hidden="true"
-                  class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-                >
-                  <legend
-                    class="css-14lo706"
-                  >
-                    <span>
-                      Sequence
-                       
-                      *
-                    </span>
-                  </legend>
-                </fieldset>
-              </div>
+                ATTAATACTTTTAACAATTGTAGTATATAAAAAAGGGAGTAACCGAAAACGGTCGGGACCGAAAACGGTGTATATAAAAGATGTGAGAAACACACCACAATACTATGGCGCGCTTTGAGGATCCAACACGGCGACCCTACAAGCTACCTGATCTGTGCACGGAACTGAACACTTCACTGCAAGACATAGAAATAACCTGTGTATATTGCAAGACAGTATTGGAACTTACAGAGGTATTTGAATTTGCATTTAAAGATTTATTTGTGGTGTATAGAGACAGTATACCCCATGCTGCATGCCATAAATGTATAGATTTTTATTCTAGAATTAGAGAATTAAGACATTATTCAGACTCTGTGTATGGAGACACATTGGAAAAACTAACTAACACTGGGTTATACAATTTATTAATAAGGTGCCTGCGGTGCCAGAAACCGTTGAATCCAGCAGAAAAACTTAGACACCTTAATGAAAAACGACGATTTCACAACATAGCTGGGCACTATAGAGGCCAGTGCCATTCGTGCTGCAACCGAGCACGACAGGAACGACTCCAACGACGCAGAGAAACACAAGTATAATATTAAGTATGCATGGACCTAAGGCAACATTGCAAGACATTGTATTGCATTTAGAGCCCCAAAATGAAATTCCGGTTGACCTTCTATGTCACGAGCAATTAAGCGACTCAGAGGAAGAAAACGATGAAATAGATGGAGTTAATCATCAACATTTACCAGCCCGACGAGCCGAACCACAACGTCACACAATGTTGTGTATGTGTTGTAAGTGTGAAGCCAGAATTGAGCTAGTAGTAGAAAGCTCAGCAGACGACCTTCGAGCATTCCAGCAGCTGTTTCTGAACACCCTGTCCTTTGTGTGTCCGTGGTGTGCATCCCAGCAGTAAGCAACAATGGCTGATCCAGAAGGTACAGACGGGGAGGGCACGGGTTGTAACGGCTGGTTTTATGTACAAGCTATTGTAGACAAAAAAACAGGAGATGTAATATCAGATGACGAGGACGAAAATGCAACAGACACAGGGTCGGATATGGTAGATTTTATTGATACACAAGGAACATTTTGTGAACAGGCAGAGCTAGAGACAGCACAGGCATTGTTCCATGCGCAGGAGGTCCACAATGATGCACAAGTGTTGCATGTTTTAAAACGAAAGTTTGCAGGAGGCAGCACAGAAAACAGTCCATTAGGGGAGCGGCTGGAGGTGGATACAGAGTTAAGTCCACGGTTACAAGAAATATCTTTAAATAGTGGGCAGAAAAAGGCAAAAAGGCGGCTGTTTACAATATCAGATAGTGGCTATGGCTGTTCTGAAGTGGAAGCAACACAGATTCAGGTAACTACAAATGGCGAACATGGCGGCAATGTATGTAGTGGCGGCAGTACGGAGGCTATAGACAACGGGGGCACAGAGGGCAACAACAGCAGTGTAGACGGTACAAGTGACAATAGCAATATAGAAAATGTAAATCCACAATGTACCATAGCACAATTAAAAGACTTGTTAAAAGTAAACAATAAACAAGGAGCTATGTTAGCAGTATTTAAAGACACATATGGGCTATCATTTACAGATTTAGTTAGAAATTTTAAAAGTGATAAAACCACGTGTACAGATTGGGTTACAGCTATATTTGGAGTAAACCCAACAATAGCAGAAGGATTTAAAACACTAATACAGCCATTTATATTATATGCCCATATTCAATGTCTAGACTGTAAATGGGGAGTATTAATATTAGCCCTGTTGCGTTACAAATGTGGTAAGAGTAGACTAACAGTTGCTAAAGGTTTAAGTACGTTGTTACACGTACCTGAAACTTGTATGTTAATTCAACCACCAAAATTGCGAAGTAGTGTTGCAGCACTATATTGGTATAGAACAGGAATATCAAATATTAGTGAAGTAATGGGAGACACACCTGAGTGGATACAAAGACTTACTATTATACAACATGGAATAGATGATAGCAATTTTGATTTGTCAGAAATGGTACAATGGGCATTTGATAATGAGCTGACAGATGAAAGCGATATGGCATTTGAATATGCCTTATTAGCAGACAGCAACAGCAATGCAGCTGCCTTTTTAAAAAGCAATTGCCAAGCTAAATATTTAAAAGATTGTGCCACAATGTGCAAACATTATAGGCGAGCCCAAAAACGACAAATGAATATGTCACAGTGGATACGATTTAGATGTTCAAAAATAGATGAAGGGGGAGATTGGAGACCAATAGTGCAATTCCTGCGATACCAACAAATAGAGTTTATAACATTTTTAGGAGCCTTAAAATCATTTTTAAAAGGAACCCCCAAAAAAAATTGTTTAGTATTTTGTGGACCAGCAAATACAGGAAAATCATATTTTGGAATGAGTTTTATACACTTTATACAAGGAGCAGTAATATCATTTGTGAATTCCACTAGTCATTTTTGGTTGGAACCGTTAACAGATACTAAGGTGGCCATGTTAGATGATGCAACGACCACGTGTTGGACATACTTTGATACCTATATGAGAAATGCGTTAGATGGCAATCCAATAAGTATTGATAGAAAGCACAAACCATTAATACAACTAAAATGTCCTCCAATACTACTAACCACAAATATACATCCAGCAAAGGATAATAGATGGCCATATTTAGAAAGTAGAATAACAGTATTTGAATTTCCAAATGCATTTCCATTTGATAAAAATGGCAATCCAGTATATGAAATAAATGACAAAAATTGGAAATGTTTTTTTGAAAGGACATGGTCCAGATTAGATTTGCACGAGGAAGAGGAAGATGCAGACACCGAAGGAAACCCTTTCGGAACGTTTAAGTTGCGTGCAGGACAAAATCATAGACCACTATGAAAATGACAGTAAAGACATAGACAGCCAAATACAGTATTGGCAACTAATACGTTGGGAAAATGCAATATTCTTTGCAGCAAGGGAACATGGCATACAGACATTAAACCACCAGGTGGTGCCAGCCTATAACATTTCAAAAAGTAAAGCACATAAAGCTATTGAACTGCAAATGGCCCTACAAGGCCTTGCACAAAGTCGATACAAAACCGAGGATTGGACACTGCAAGACACATGCGAGGAACTATGGAATACAGAACCTACTCACTGCTTTAAAAAAGGTGGCCAAACAGTACAAGTATATTTTGATGGCAACAAAGACAATTGTATGACCTATGTAGCATGGGACAGTGTGTATTATATGACTGATGCAGGAACATGGGACAAAACCGCTACCTGTGTAAGTCACAGGGGATTGTATTATGTAAAGGAAGGGTACAACACGTTTTATATAGAATTTAAAAGTGAATGTGAAAAATATGGGAACACAGGTACGTGGGAAGTACATTTTGGGAATAATGTAATTGATTGTAATGACTCTATGTGCAGTACCAGTGACGACACGGTATCCGCTACTCAGCTTGTTAAACAGCTACAGCACACCCCCTCACCGTATTCCAGCACCGTGTCCGTGGGCACCGCAAAGACCTACGGCCAGACGTCGGCTGCTACACGACCTGGACACTGTGGACTCGCGGAGAAGCAGCATTGTGGACCTGTCAACCCACTTCTCGGTGCAGCTACACCTACAGGCAACAACAAAAGACGGAAACTCTGTAGTGGTAACACTACGCCTATAATACATTTAAAAGGTGACAGAAACAGTTTAAAATGTTTACGGTACAGATTGCGAAAACATAGCGACCACTATAGAGATATATCATCCACCTGGCATTGGACAGGTGCAGGCAATGAAAAAACAGGAATACTGACTGTAACATACCATAGTGAAACACAAAGAACAAAATTTTTAAATACTGTTGCAATTCCAGATAGTGTACAAATATTGGTGGGATACATGACAATGTAATACATATGCTGTAGTACCAATATGTTATCACTTATTTTTTTATTTTGCTTTTGTGTATGCATGTATGTGTGCTGCCATGTCCCGCTTTTGCCATCTGTCTGTATGTGTGCGTATGCATGGGTATTGGTATTTGTGTATATTGTGGTAATAACGTCCCCTGCCACAGCATTCACAGTATATGTATTTTGTTTTTTATTGCCCATGTTACTATTGCATATACATGCTATATTGTCTTTACAGTAATTGTATAGGTTGTTTTATACAGTGTATTGTACATTGTATATTTTGTTTTATACCTTTTATGCTTTTTGTATTTTTGTAATAAAAGTATGGTATCCCACCGTGCCGCACGACGCAAACGGGCTTCGGTAACTGACTTATATAAAACATGTAAACAATCTGGTACATGTCCACCTGATGTTGTTCCTAAGGTGGAGGGCACCACGTTAGCAGATAAAATATTGCAATGGTCAAGCCTTGGTATATTTTTGGGTGGACTTGGCATAGGTACTGGCAGTGGTACAGGGGGTCGTACAGGGTACATTCCATTGGGTGGGCGTTCCAATACAGTGGTGGATGTTGGTCCTACACGTCCCCCAGTGGTTATTGAACCTGTGGGCCCCACAGACCCATCTATTGTTACATTAATAGAGGACTCCAGTGTGGTTACATCAGGTGCACCTAGGCCTACGTTTACTGGCACGTCTGGGTTTGATATAACATCTGCGGGTACAACTACACCTGCGGTTTTGGATATCACACCTTCGTCTACCTCTGTGTCTATTTCCACAACCAATTTTACCAATCCTGCATTTTCTGATCCGTCCATTATTGAAGTTCCACAAACTGGGGAGGTGGCAGGTAATGTATTTGTTGGTACCCCTACATCTGGAACACATGGGTATGAGGAAATACCTTTACAAACATTTGCTTCTTCTGGTACGGGGGAGGAACCCATTAGTAGTACCCCATTGCCTACTGTGCGGCGTGTAGCAGGTCCCCGCCTTTACAGTAGGGCCTACCAACAAGTGTCAGTGGCTAACCCTGAGTTTCTTACACGTCCATCCTCTTTAATTACATATGACAACCCGGCCTTTGAGCCTGTGGACACTACATTAACATTTGATCCTCGTAGTGATGTTCCTGATTCAGATTTTATGGATATTATCCGTCTACATAGGCCTGCTTTAACATCCAGGCGTGGGACTGTTCGCTTTAGTAGATTAGGTCAACGGGCAACTATGTTTACCCGCAGCGGTACACAAATAGGTGCTAGGGTTCACTTTTATCATGATATAAGTCCTATTGCACCTTCCCCAGAATATATTGAACTGCAGCCTTTAGTATCTGCCACGGAGGACAATGACTTGTTTGATATATATGCAGATGACATGGACCCTGCAGTGCCTGTACCATCGCGTTCTACTACCTCCTTTGCATTTTTTAAATATTCGCCCACTATATCTTCTGCCTCTTCCTATAGTAATGTAACGGTCCCTTTAACCTCCTCTTGGGATGTGCCTGTATACACGGGTCCTGATATTACATTACCATCTACTACCTCTGTATGGCCCATTGTATCACCCACGGCCCCTGCCTCTACACAGTATATTGGTATACATGGTACACATTATTATTTGTGGCCATTATATTATTTTATTCCTAAGAAACGTAAACGTGTTCCCTATTTTTTTGCAGATGGCTTTGTGGCGGCCTAGTGACAATACCGTATATCTTCCACCTCCTTCTGTGGCAAGAGTTGTAAATACCGATGATTATGTGACTCCCACAAGCATATTTTATCATGCTGGCAGCTCTAGATTATTAACTGTTGGTAATCCATATTTTAGGGTTCCTGCAGGTGGTGGCAATAAGCAGGATATTCCTAAGGTTTCTGCATACCAATATAGAGTATTTAGGGTGCAGTTACCTGACCCAAATAAATTTGGTTTACCTGATACTAGTATTTATAATCCTGAAACACAACGTTTAGTGTGGGCCTGTGCTGGAGTGGAAATTGGCCGTGGTCAGCCTTTAGGTGTTGGCCTTAGTGGGCATCCATTTTATAATAAATTAGATGACACTGAAAGTTCCCATGCCGCCACGTCTAATGTTTCTGAGGACGTTAGGGACAATGTGTCTGTAGATTATAAGCAGACACAGTTATGTATTTTGGGCTGTGCCCCTGCTATTGGGGAACACTGGGCTAAAGGCACTGCTTGTAAATCGCGTCCTTTATCACAGGGCGATTGCCCCCCTTTAGAACTTAAAAACACAGTTTTGGAAGATGGTGATATGGTAGATACTGGATATGGTGCCATGGACTTTAGTACATTGCAAGATACTAAATGTGAGGTACCATTGGATATTTGTCAGTCTATTTGTAAATATCCTGATTATTTACAAATGTCTGCAGATCCTTATGGGGATTCCATGTTTTTTTGCTTACGGCGTGAGCAGCTTTTTGCTAGGCATTTTTGGAATAGAGCAGGTACTATGGGTGACACTGTGCCTCAATCCTTATATATTAAAGGCACAGGTATGCCTGCTTCACCTGGCAGCTGTGTGTATTCTCCCTCTCCAAGTGGCTCTATTGTTACCTCTGACTCCCAGTTGTTTAATAAACCATATTGGTTACATAAGGCACAGGGTCATAACAATGGTGTTTGCTGGCATAATCAATTATTTGTTACTGTGGTAGATACCACTCCCAGTACCAATTTAACAATATGTGCTTCTACACAGTCTCCTGTACCTGGGCAATATGATGCTACCAAATTTAAGCAGTATAGCAGACATGTTGAGGAATATGATTTGCAGTTTATTTTTCAGTTGTGTACTATTACTTTAACTGCAGATGTTATGTCCTATATTCATAGTATGAATAGCAGTATTTTAGAGGATTGGAACTTTGGTGTTCCCCCCCCCCCAACTACTAGTTTGGTGGATACATATCGTTTTGTACAATCTGTTGCTATTACCTGTCAAAAGGATGCTGCACCGGCTGAAAATAAGGATCCCTATGATAAGTTAAAGTTTTGGAATGTGGATTTAAAGGAAAAGTTTTCTTTAGACTTAGATCAATATCCCCTTGGACGTAAATTTTTGGTTCAGGCTGGATTGCGTCGCAAGCCCACCATAGGCCCTCGCAAACGTTCTGCTCCATCTGCCACTACGTCTTCTAAACCTGCCAAGCGTGTGCGTGTACGTGCCAGGAAGTAATATGTGTGTGTGTATATATATATACATCTATTGTTGTGTTTGTATGTCCTGTGTTTGTGTTTGTTGTATGATTGCATTGTATGGTATGTATGGTTGTTGTTGTATGTTGTATGTTACTATATTTGTTGGTATGTGGCATTAAATAAAATATGTTTTGTGGTTCTGTGTGTTATGTGGTTGCGCCCTAGTGAGTAACAACTGTATTTGTGTTTGTGGTATGGGTGTTGCTTGTTGGGCTATATATTGTCCTGTATTTCAAGTTATAAAACTGCACACCTTACAGCATCCATTTTATCCTACAATCCTCCATTTTGCTGTGCAACCGATTTCGGTTGCCTTTGGCTTATGTCTGTGGTTTTCTGCACAATACAGTACGCTGGCACTATTGCAAACTTTAATCTTTTGGGCACTGCTCCTACATATTTTGAACAATTGGCGCGCCTCTTTGGCGCATATAAGGCGCACCTGGTATTAGTCATTTTCCTGTCCAGGTGCGCTACAACAATTGCTTGCATAACTATATCCACTCCCTAAGTAATAAAACTGCTTTTAGGCACATATTTTAGTTTGTTTTTACTTAAGCTAATTGCATACTTGGCTTGTACAACTACTTTCATGTCCAACATTCTGTCTACCCTTAACATGAACTATAATATGACTAAGCTGTGCATACATAGTTTATGCAACCGAAATAGGTTGGGCAGCACATACTATACTTTTC
+              </textarea>
               <p
-                class="MuiFormHelperText-root Mui-disabled MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
-                id=":r0:-helper-text"
+                class="text-sm font-light"
               >
                 Sequence length (bp) has to be at least 25bp. But maximum up to 500000bp. Current length: 7857
               </p>
             </div>
+          </div>
+          <div
+            class="flex-1"
+          >
             <div
-              class="css-1p5q5e5-MuiStack-root"
+              class="flex flex-col gap-2"
             >
-              <div
-                class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-                data-testid="threshold-input"
+              <label
+                class="text-md font-medium"
               >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="true"
-                  for=":r1:"
-                  id=":r1:-label"
-                >
-                  Threshold
-                  <span
-                    aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
-                  >
-                     
-                    *
-                  </span>
-                </label>
-                <div
-                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
-                >
-                  <input
-                    aria-describedby=":r1:-helper-text"
-                    aria-invalid="false"
-                    class="MuiInputBase-input MuiOutlinedInput-input Mui-disabled css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-                    disabled=""
-                    id=":r1:"
-                    required=""
-                    type="number"
-                    value="0.9"
-                  />
-                  <fieldset
-                    aria-hidden="true"
-                    class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-                  >
-                    <legend
-                      class="css-14lo706"
-                    >
-                      <span>
-                        Threshold
-                         
-                        *
-                      </span>
-                    </legend>
-                  </fieldset>
-                </div>
-                <p
-                  class="MuiFormHelperText-root Mui-disabled MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
-                  id=":r1:-helper-text"
-                >
-                  Threshold has to be between 0 and 1. The recommended value is 0.9 (probability of quadruplex existence in given window).
-                </p>
-              </div>
+                Threshold
+              </label>
+              <input
+                class="p-2 border-2 border-nord5 rounded-md disabled:opacity-50"
+                data-testid="threshold-input"
+                disabled=""
+                type="number"
+                value="0.9"
+              />
+              <p
+                class="text-sm font-light"
+              >
+                Threshold has to be between 0 and 1. The recommended value is 0.9 (probability of quadruplex existence in given window).
+              </p>
               <button
-                class="MuiButtonBase-root MuiButton-root MuiLoadingButton-root MuiButton-outlined MuiButton-outlinedInherit MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorInherit Mui-disabled MuiButton-root MuiLoadingButton-root MuiButton-outlined MuiButton-outlinedInherit MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorInherit css-kpoh2l-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root"
+                class="border-2 border-nord14 p-2 text-gray-700 rounded-lg disabled:opacity-50 hover:bg-nord14 hover:text-white"
                 data-testid="start-button"
                 disabled=""
-                id=":r2:"
-                tabindex="-1"
-                type="button"
               >
                 START ANALYSIS
               </button>
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-180lf2n-MuiButtonBase-root-MuiButton-root"
+                class="border-2 border-nord11 p-2 text-gray-700 rounded-lg hover:bg-nord11 hover:text-white"
                 data-testid="reset-button"
-                tabindex="0"
-                type="button"
               >
                 RESET ANALYSIS
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardSuccess MuiAlert-standard css-efvcc7-MuiPaper-root-MuiAlert-root"
-        role="alert"
+        class="flex flex-row rounded-md  gap-2 p-2 text-white bg-nord14"
       >
-        <div
-          class="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="CheckCircleOutlineIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
         >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-            data-testid="SuccessOutlinedIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2, 4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0, 0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-            />
-          </svg>
-        </div>
-        <div
-          class="MuiAlert-message css-1pxa9xg-MuiAlert-message"
-        >
-          Found results
-        </div>
+          <path
+            d="M16.59 7.58 10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        Found results
       </div>
       <div
-        class="css-1p5q5e5-MuiStack-root"
+        class="flex flex-col gap-10"
       >
-        <div
-          class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        <h1
+          class="text-3xl"
         >
           Results and statistics
-        </div>
+        </h1>
         <div
-          class="css-e53awj-MuiStack-root"
+          class="flex flex-col md:flex-row gap-4"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-            style="width: 200px; border-top: 5px solid; border-color: #98ddca;"
+            class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
           >
-            <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            <h1
+              class="text-md text-nord2"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-              >
-                Sequence length
-              </p>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-              >
-                30
-              </p>
-            </div>
+              Sequence length
+            </h1>
+            <h2
+              class="text-3xl font-bold text-nord3"
+            >
+              30
+            </h2>
           </div>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-            style="width: 200px; border-top: 5px solid; border-color: #98dd99;"
+            class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
           >
-            <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            <h1
+              class="text-md text-nord2"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-              >
-                Threshold
-              </p>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-              >
-                0.9
-              </p>
-            </div>
+              Threshold
+            </h1>
+            <h2
+              class="text-3xl font-bold text-nord3"
+            >
+              0.9
+            </h2>
           </div>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-            style="width: 200px; border-top: 5px solid; border-color: #d5ecc2;"
+            class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
           >
-            <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            <h1
+              class="text-md text-nord2"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-              >
-                Frequency per thousand
-              </p>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-              >
-                1
-              </p>
-            </div>
+              Frequency per thousand
+            </h1>
+            <h2
+              class="text-3xl font-bold text-nord3"
+            >
+              1
+            </h2>
           </div>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-            style="width: 200px; border-top: 5px solid; border-color: #ffd3b4;"
+            class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
           >
-            <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            <h1
+              class="text-md text-nord2"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-              >
-                GC count
-              </p>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-              >
-                10
-              </p>
-            </div>
+              GC count
+            </h1>
+            <h2
+              class="text-3xl font-bold text-nord3"
+            >
+              10
+            </h2>
           </div>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-            style="width: 200px; border-top: 5px solid; border-color: #ffaaa7;"
+            class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
           >
-            <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            <h1
+              class="text-md text-nord2"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-              >
-                Number of quadruplexes
-              </p>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-              >
-                1
-              </p>
-            </div>
+              Number of quadruplexes
+            </h1>
+            <h2
+              class="text-3xl font-bold text-nord3"
+            >
+              1
+            </h2>
           </div>
         </div>
+        <div
+          class="border px-6 py-4 shadow-sm rounded-xl p-2 "
+        />
         <div
           class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 css-80pr5n-MuiPaper-root"
         >
@@ -882,7 +750,7 @@ exports[`Dashboard should match snapshot 1`] = `
                     />
                     <p
                       class="MuiTablePagination-selectLabel css-pdct74-MuiTablePagination-selectLabel"
-                      id=":ri:"
+                      id=":rf:"
                     >
                       Rows per page
                     </p>
@@ -892,9 +760,9 @@ exports[`Dashboard should match snapshot 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby=":ri: :rh:"
+                        aria-labelledby=":rf: :re:"
                         class="MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input css-194a1fa-MuiSelect-select-MuiInputBase-input"
-                        id=":rh:"
+                        id=":re:"
                         role="button"
                         tabindex="0"
                       >

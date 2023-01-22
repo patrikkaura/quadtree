@@ -72,22 +72,27 @@ export function SequenceGraph({ intervals, length }: Props) {
   };
 
   return (
-    <Line
-      height={100}
-      options={{
-        responsive: true,
-        plugins: {
-          legend: {
-            position: "top" as const,
+    <div className="border px-6 py-4 shadow-sm rounded-xl p-2 ">
+      <Line
+        height={100}
+        options={{
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top" as const,
+            },
+            title: {
+              display: true,
+              text: "PQS in sequence",
+              font: {
+                size: 15,
+              },
+            },
           },
-          title: {
-            display: true,
-            text: "Quadtree",
-          },
-        },
-        normalized: true,
-      }}
-      data={data}
-    />
+          normalized: true,
+        }}
+        data={data}
+      />
+    </div>
   );
 }

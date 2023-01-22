@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SequenceGraph should render 1`] = `<div />`;
+exports[`SequenceGraph should render 1`] = `
+<div>
+  <div
+    class="border px-6 py-4 shadow-sm rounded-xl p-2 "
+  />
+</div>
+`;
