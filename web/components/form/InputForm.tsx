@@ -1,9 +1,5 @@
 import { Constants } from "@core/config";
-import LoadingButton from "@mui/lab/LoadingButton";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
+import CircularProgress from "@mui/material/CircularProgress";
 import { ChangeEvent, useCallback, useMemo } from "react";
 
 export type Props = {
@@ -28,7 +24,7 @@ export function InputForm({
   onAnalyseClick,
 }: Readonly<Props>) {
   const handleSetSequence = useCallback(
-    ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
+    ({ target: { value } }: ChangeEvent<HTMLTextAreaElement>) => {
       onSequenceChange(value);
     },
     [onSequenceChange]
@@ -60,62 +56,73 @@ export function InputForm({
   }, [sequence, threshold]);
 
   return (
-    <>
-      <Typography variant="h5">Input params</Typography>
-      <Stack direction="row" spacing={4} style={{ paddingTop: 30 }}>
-        <TextField
-          required
-          data-testid="sequence-input"
-          label="Sequence"
-          multiline
-          rows={10}
-          fullWidth
-          value={sequence}
-          disabled={isLoading || isDataLoaded}
-          onChange={handleSetSequence}
-          InputLabelProps={{ shrink: true }}
-          helperText={`Sequence length (bp) has to be at least ${Constants.MINIMUM_SEQUENCE_LENGTH}bp. But maximum up to ${Constants.MAXIMUM_SEQUENCE_LENGTH}bp. Current length: ${sequence.length}`}
-          error={inputError.sequence}
-        />
+    <div className="border shadow-sm rounded-xl py-6 px-10">
+      <h1 className="text-3xl">Input params</h1>
+      <div className="flex flex-col md:flex-row gap-4 pt-8">
+        <div className="flex-2">
+          <div className="flex flex-col gap-2">
+            <label className="text-md font-medium">Sequence</label>
+            <textarea
+              className="p-2 border-2 border-nord5 rounded-md disabled:opacity-50"
+              required
+              name="sequence"
+              data-testid="sequence-input"
+              rows={10}
+              value={sequence}
+              disabled={isLoading || isDataLoaded}
+              onChange={handleSetSequence}
+            />
 
-        <Stack direction="column" spacing={2}>
-          <TextField
-            required
-            data-testid="threshold-input"
-            label="Threshold"
-            type="number"
-            value={threshold}
-            disabled={isLoading || isDataLoaded}
-            onChange={handleSetThreshold}
-            InputLabelProps={{ shrink: true }}
-            helperText={
-              "Threshold has to be between 0 and 1. The recommended value is 0.9 (probability of quadruplex existence in given window)."
-            }
-            error={inputError.threshold}
-          />
-          <LoadingButton
-            data-testid="start-button"
-            color="inherit"
-            variant="outlined"
-            loading={isLoading}
-            onClick={onAnalyseClick}
-            disabled={
-              inputError.sequence || inputError.threshold || isDataLoaded
-            }
-          >
-            START ANALYSIS
-          </LoadingButton>
-          <Button
-            data-testid="reset-button"
-            color="error"
-            variant="outlined"
-            disabled={isLoading || !isDataLoaded}
-            onClick={handleResetForm}
-          >
-            RESET ANALYSIS
-          </Button>
-        </Stack>
-      </Stack>
-    </>
+            <p className="text-sm font-light">
+              {`Sequence length (bp) has to be at least ${Constants.MINIMUM_SEQUENCE_LENGTH}bp. But maximum up to ${Constants.MAXIMUM_SEQUENCE_LENGTH}bp. Current length: ${sequence.length}`}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex-1">
+          <div className="flex flex-col gap-2">
+            <label className="text-md font-medium">Threshold</label>
+            <input
+              className="p-2 border-2 border-nord5 rounded-md disabled:opacity-50"
+              data-testid="threshold-input"
+              type="number"
+              value={threshold}
+              disabled={isLoading || isDataLoaded}
+              onChange={handleSetThreshold}
+            />
+            <p className="text-sm font-light">
+              Threshold has to be between 0 and 1. The recommended value is 0.9
+              (probability of quadruplex existence in given window).
+            </p>
+
+            <button
+              data-testid="start-button"
+              className="border-2 border-nord14 p-2 text-gray-700 rounded-lg disabled:opacity-50 hover:bg-nord14 hover:text-white"
+              onClick={onAnalyseClick}
+              disabled={
+                inputError.sequence ||
+                inputError.threshold ||
+                isDataLoaded ||
+                isLoading
+              }
+            >
+              {isLoading ? (
+                <CircularProgress className="text-nord14" size={20} />
+              ) : (
+                "START ANALYSIS"
+              )}
+            </button>
+            <button
+              className="border-2 border-nord11 p-2 text-gray-700 rounded-lg hover:bg-nord11 hover:text-white"
+              data-testid="reset-button"
+              disabled={isLoading || !isDataLoaded}
+              onClick={handleResetForm}
+            >
+              RESET ANALYSIS
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

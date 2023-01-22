@@ -1,29 +1,13 @@
-import MuiCard from "@mui/material/Card";
-import MuiCardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-
 export type Props = {
   header: string;
   content: string | number;
-  width: number;
-  color: string;
 };
 
-export function Card({ header, content, width, color }: Props) {
+export function Card({ header, content }: Props) {
   return (
-    <MuiCard
-      style={{
-        width,
-        borderTop: "5px solid",
-        borderColor: color,
-      }}
-    >
-      <MuiCardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {header}
-        </Typography>
-        <Typography sx={{ fontSize: 25 }}>{content}</Typography>
-      </MuiCardContent>
-    </MuiCard>
+    <div className="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4">
+      <h1 className="text-md text-nord2">{header}</h1>
+      <h2 className="text-3xl font-bold text-nord3">{content}</h2>
+    </div>
   );
 }

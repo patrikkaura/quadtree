@@ -1,7 +1,4 @@
 import { DEFAULT_SEQUENCE } from "@core/config";
-import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 import * as Sentry from "@sentry/react";
 import { trpc } from "@utils/trpc";
 import { useState } from "react";
@@ -20,26 +17,22 @@ export function Dashboard() {
   const quadtreeMutation = trpc.quadtree.useMutation();
 
   return (
-    <div style={{ maxWidth: 1200, margin: "auto" }}>
+    <div className="m-auto max-w-6xl">
       <Toolbar />
 
-      <Stack direction="column" spacing={5} style={{ padding: 30 }}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <InputForm
-              isDataLoaded={Boolean(quadtreeMutation.data)}
-              isLoading={quadtreeMutation.isLoading}
-              sequence={sequence}
-              threshold={threshold}
-              onSequenceChange={setSequence}
-              onThresholdChange={setThreshold}
-              onDataReset={quadtreeMutation.reset}
-              onAnalyseClick={() =>
-                quadtreeMutation.mutate({ sequence, threshold })
-              }
-            />
-          </Grid>
-        </Grid>
+      <div className="flex flex-col gap-10 p-10">
+        <InputForm
+          isDataLoaded={Boolean(quadtreeMutation.data)}
+          isLoading={quadtreeMutation.isLoading}
+          sequence={sequence}
+          threshold={threshold}
+          onSequenceChange={setSequence}
+          onThresholdChange={setThreshold}
+          onDataReset={quadtreeMutation.reset}
+          onAnalyseClick={() =>
+            quadtreeMutation.mutate({ sequence, threshold })
+          }
+        />
 
         {quadtreeMutation.isSuccess && (
           <Alert
@@ -49,10 +42,8 @@ export function Dashboard() {
 
         {quadtreeMutation.isSuccess &&
           Boolean(quadtreeMutation.data.intervals.length) && (
-            <Stack direction="column" spacing={2}>
-              <Typography variant="h5" component="div">
-                Results and statistics
-              </Typography>
+            <div className="flex flex-col gap-10">
+              <h1 className="text-3xl">Results and statistics</h1>
               <InfoCards
                 threshold={threshold}
                 stats={quadtreeMutation.data.stats}
@@ -63,9 +54,9 @@ export function Dashboard() {
               />
 
               <Table data={quadtreeMutation.data?.results} />
-            </Stack>
+            </div>
           )}
-      </Stack>
+      </div>
     </div>
   );
 }

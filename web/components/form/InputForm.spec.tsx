@@ -32,10 +32,9 @@ describe("InputForm", () => {
   it("should call onSequenceChange when sequence input changes", () => {
     renderComponent({});
 
-    const sequenceInput = screen
-      .getByTestId("sequence-input")
-      // eslint-disable-next-line testing-library/no-node-access
-      .querySelector("textarea") as HTMLTextAreaElement;
+    const sequenceInput = screen.getByTestId(
+      "sequence-input"
+    ) as HTMLTextAreaElement;
 
     fireEvent.change(sequenceInput, { target: { value: "ATG" } });
 
@@ -46,10 +45,7 @@ describe("InputForm", () => {
   it("should call onThresholdChange when threshold input changes", () => {
     renderComponent({});
 
-    const thresholdInput = screen
-      .getByTestId("threshold-input")
-      // eslint-disable-next-line testing-library/no-node-access
-      .querySelector("input") as HTMLInputElement;
+    const thresholdInput = screen.getByTestId("threshold-input");
 
     fireEvent.change(thresholdInput, { target: { value: "0.2" } });
 
@@ -97,18 +93,8 @@ describe("InputForm", () => {
       componentProps: { ...props, isDataLoaded: true },
     });
 
-    expect(
-      screen
-        .getByTestId("sequence-input")
-        // eslint-disable-next-line testing-library/no-node-access
-        .querySelector("textarea")
-    ).toBeDisabled();
-    expect(
-      screen
-        .getByTestId("threshold-input")
-        // eslint-disable-next-line testing-library/no-node-access
-        .querySelector("input")
-    ).toBeDisabled();
+    expect(screen.getByTestId("sequence-input")).toBeDisabled();
+    expect(screen.getByTestId("threshold-input")).toBeDisabled();
   });
 
   it("should disable inputs when isLoading", () => {
@@ -116,18 +102,8 @@ describe("InputForm", () => {
       componentProps: { ...props, isLoading: true },
     });
 
-    expect(
-      screen
-        .getByTestId("sequence-input")
-        // eslint-disable-next-line testing-library/no-node-access
-        .querySelector("textarea")
-    ).toBeDisabled();
-    expect(
-      screen
-        .getByTestId("threshold-input")
-        // eslint-disable-next-line testing-library/no-node-access
-        .querySelector("input")
-    ).toBeDisabled();
+    expect(screen.getByTestId("sequence-input")).toBeDisabled();
+    expect(screen.getByTestId("threshold-input")).toBeDisabled();
   });
 
   afterEach(() => {

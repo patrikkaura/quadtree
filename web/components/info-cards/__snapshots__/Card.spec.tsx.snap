@@ -3,23 +3,18 @@
 exports[`Card should render 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-    style="width: 200px; border-top: 5px solid; border-color: #000000;"
+    class="flex flex-col justify-between w-full border rounded-lg p-5 shadow-sm border-t-nord7 border-t-4"
   >
-    <div
-      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    <h1
+      class="text-md text-nord2"
     >
-      <p
-        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
-      >
-        header
-      </p>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-ll0ml8-MuiTypography-root"
-      >
-        random-content
-      </p>
-    </div>
+      header
+    </h1>
+    <h2
+      class="text-3xl font-bold text-nord3"
+    >
+      random-content
+    </h2>
   </div>
 </div>
 `;
