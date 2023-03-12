@@ -1,4 +1,4 @@
-import { DEFAULT_SEQUENCE } from "@core/config";
+import { Constants, DEFAULT_SEQUENCE } from "@core/config";
 import * as Sentry from "@sentry/react";
 import { trpc } from "@utils/trpc";
 import { useState } from "react";
@@ -12,7 +12,7 @@ import { Toolbar } from "./Toolbar";
 
 export function Dashboard() {
   const [sequence, setSequence] = useState(DEFAULT_SEQUENCE);
-  const [threshold, setThreshold] = useState(0.9);
+  const [threshold, setThreshold] = useState(Constants.DEFAULT_THRESHOLD);
 
   const quadtreeMutation = trpc.quadtree.useMutation();
 

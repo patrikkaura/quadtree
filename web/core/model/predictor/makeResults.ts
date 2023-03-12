@@ -1,3 +1,5 @@
+import { Constants } from "@core/config";
+
 import type { Prediction } from "./makePrediction";
 
 export function makeResults(
@@ -20,9 +22,9 @@ export function makeResults(
 
     return {
       index,
-      interval,
-      length: end + 30 - start,
-      sequence: sequence.slice(start, end + 30),
+      interval: [start, end + Constants.FIXED_WINDOW_SIZE],
+      length: end + Constants.FIXED_WINDOW_SIZE - start,
+      sequence: sequence.slice(start, end + Constants.FIXED_WINDOW_SIZE),
       meanScore: scores.reduce((a, b) => a + b, 0) / scores.length,
       scores,
     };

@@ -91,7 +91,7 @@ export function InputForm({
               onChange={handleSetThreshold}
             />
             <p className="text-sm font-light">
-              Threshold has to be between 0 and 1. The recommended value is 0.9
+              Threshold has to be between 0 and 1. The recommended value is 0.90
               (probability of quadruplex existence in given window).
             </p>
 

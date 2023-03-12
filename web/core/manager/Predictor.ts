@@ -1,6 +1,7 @@
+import { Constants } from "@core/config";
 import { makePrediction } from "@core/model/predictor/makePrediction";
 import { makeResults } from "@core/model/predictor/makeResults";
-import { mergePredictions } from "@core/model/predictor/mergePredictions";
+import { mergeIntervals,mergePredictions } from "@core/model/predictor/mergePredictions";
 import { sequenceConvertor } from "@core/model/predictor/sequenceConvertor";
 import { calculateFrequencyPerThousand } from "@core/model/stats/calculateFrequencyPerThousand";
 import { calculateGcCount } from "@core/model/stats/calculateGcCount";
@@ -14,7 +15,16 @@ export class PredictorManager {
 
     const stats = this.stats(sequence, results.length);
 
-    return { results, intervals: mergedIntervals, stats };
+    const intervals = mergeIntervals(
+      mergedIntervals.map(([start, end]) => [start, end + Constants.FIXED_WINDOW_SIZE])
+    )
+
+
+    return { 
+      results, 
+      stats,
+      intervals, 
+    };
   }
 
   private static stats(sequence: string, numberOfQuadruplexes: number) {
